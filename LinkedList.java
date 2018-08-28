@@ -15,7 +15,7 @@ public class LinkedList<K extends Comparable<K>> {
 	}
 	
 	/**
-	 * Add a new node with the given key to the front of the LinkedList
+	 * Adds a new node with the given key to the front of the LinkedList
 	 * @param key
 	 * @throws DuplicateKeyException
 	 */
@@ -34,7 +34,7 @@ public class LinkedList<K extends Comparable<K>> {
 	}
 	
 	/**
-	 * Add a new node with the given key to the back of the LinkedList
+	 * Adds a new node with the given key to the back of the LinkedList
 	 * @param key
 	 * @throws DuplicateKeyException
 	 */
@@ -53,7 +53,7 @@ public class LinkedList<K extends Comparable<K>> {
 	}
 	
 	/**
-	 * Add a new node with the given key in the appropriate spot in the sorted LinkedlIst
+	 * Adds a new node with the given key in the appropriate spot in the sorted LinkedlIst
 	 * @param key
 	 * @throws DuplicateKeyException
 	 */
@@ -90,7 +90,7 @@ public class LinkedList<K extends Comparable<K>> {
 	}
 	
 	/**
-	 * Remove the node at the front of the LinkedList
+	 * Removes the node at the front of the LinkedList
 	 * @return the key of the node in front of the linkedList
 	 */
 	public K removeFromFront() {
@@ -108,7 +108,7 @@ public class LinkedList<K extends Comparable<K>> {
 	}
 	
 	/**
-	 * Remove the node at the back of the LinkedList
+	 * Removes the node at the back of the LinkedList
 	 * @return 
 	 */
 	public K removeFromBack() {
@@ -126,7 +126,7 @@ public class LinkedList<K extends Comparable<K>> {
 	}
 	
 	/**
-	 * Remove from the LinkedList the node with the given key
+	 * Removes from the LinkedList the node with the given key
 	 * @param key
 	 */
 	public void remove(K key) {
@@ -147,7 +147,7 @@ public class LinkedList<K extends Comparable<K>> {
 	}
 	
 	/**
-	 * Get the key of the node at the front of the list
+	 * Gets the key of the node at the front of the list
 	 * @return the key of the node at the front of the list
 	 */
 	public K getItemInFront() {
@@ -155,7 +155,7 @@ public class LinkedList<K extends Comparable<K>> {
 	}
 	
 	/**
-	 * Get the number of items in the list
+	 * Gets the number of items in the list
 	 * @return the number of items of the list
 	 */
 	public int size() {
@@ -229,7 +229,7 @@ public class LinkedList<K extends Comparable<K>> {
 	}	
 	
 	/**
-	 * @return a String representation of the LinkedList ideal for stacks
+	 * @return a String representation of the LinkedList
 	 */
 	public String toStringForStack() {
 		if (numItems == 0)
@@ -247,7 +247,7 @@ public class LinkedList<K extends Comparable<K>> {
 	}	
 	
 	/**
-	 * @return a String representation of the LinkedList ideal for queues
+	 * @return a String representation of the LinkedList
 	 */
 	public String toStringForQueue() {
 		if (numItems == 0)
