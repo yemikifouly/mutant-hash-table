@@ -82,10 +82,6 @@ public class MainClass{
 			queue = table.toQueue();
 			System.out.println(queue.toString());
 			System.out.println("\n");
-			
-			System.out.println("table.toBST() operation returns:\n");
-			BST<String> bST = table.toBST();
-			System.out.println(bST.toString());
 		} 
 		catch (DuplicateKeyException e) {
 			System.out.println(e.getMessage());
@@ -94,5 +90,4 @@ public class MainClass{
 			System.out.println(e.getMessage());
 		}
 	}
-
 }
