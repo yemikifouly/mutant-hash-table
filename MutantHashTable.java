@@ -99,7 +99,7 @@ public class MutantHashTable<K extends Comparable<K>> {
     				newTable[index].add(key);
     			}
     		}			
-		}
+	}
     	//System.out.println("\nAlert: The table has been resized.\n");
     	bucketsIndexes = newBucketsIndexes;
     	return newTable;
@@ -109,19 +109,19 @@ public class MutantHashTable<K extends Comparable<K>> {
      * Removes the node with the given key from the Hash Table
      * @param key
      */
-	public void remove(K key) {
-		int index = getIndex(key);
-		if (table[index] == null)
-			throw new NoSuchElementException();
-		table[index].remove(key);
-		numItems--;
-		if (table[index].size() == 0) {
-			table[index] = null;
-			numBuckets--;
-			bucketsIndexes.remove(new Integer(index));
-		}
-		items.remove(key);
+    public void remove(K key) {
+	int index = getIndex(key);
+	if (table[index] == null)
+            throw new NoSuchElementException();
+	table[index].remove(key);
+	numItems--;
+	if (table[index].size() == 0) {
+	    table[index] = null;
+	    numBuckets--;
+	    bucketsIndexes.remove(new Integer(index));
 	}
+	items.remove(key);
+    }
 	
 	/**
 	 * Merge the given table with the current table
@@ -194,27 +194,16 @@ public class MutantHashTable<K extends Comparable<K>> {
 		return queue;
 	}
 
-    /**
-     * Converts Hash Table to a Binary Search Tree
-     * @return the Binary Search Tree obtained from the Hash Table
-     * @throws DuplicateKeyException
-     */
-    public BST<K> toBST() throws DuplicateKeyException{
-    	BST<K> bST = new BST<>();
-    	for (int i = 0; i < items.size(); i++)
-    		bST.insert(items.get(i));
-    	return bST;
-    }
     
-    /**
-     * @return a String representation of the mutant Hash Table
-     */
-    public String toString() {
-    	String toReturn = "";
-    	String content = "\nContent: ";
-    	bucketsIndexes.sort(null);
-    	for (int i = 0; i < bucketsIndexes.size(); i++) 
-    			toReturn += "Index: " + bucketsIndexes.get(i) + content + table[bucketsIndexes.get(i)].toString() + "\n\n";
-    	return toReturn;
-    }
+        /**
+        * @return a String representation of the mutant Hash Table
+        */
+        public String toString() {
+    	    String toReturn = "";
+    	    String content = "\nContent: ";
+    	    bucketsIndexes.sort(null);
+    	    for (int i = 0; i < bucketsIndexes.size(); i++) 
+    	        toReturn += "Index: " + bucketsIndexes.get(i) + content + table[bucketsIndexes.get(i)].toString() + "\n\n";
+    	    return toReturn;
+        }
 }
